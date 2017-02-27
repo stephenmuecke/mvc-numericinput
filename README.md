@@ -23,3 +23,25 @@ The jQuery plugin handles the
 - `.keypress()` event to allow only valid input (digits, decimal separator and negative sign)
 
 The plugin also provides an option for rounding the raw input
+
+###Usage
+
+To generate the html
+
+    @Html.NumericInputFor(m => m.PropertyName)
+
+where `PropertyName` is a numeric data type (`int`, `float`, `double` `decimal` etc)
+
+To attach the plug-in
+
+    $('#PropertyName').numeric();
+
+or to round values
+
+    $('#PropertyName').numeric({ 
+        rounding: 0.25
+    });
+
+##To do
+- Add parameter for html attributes
+- Support for Bootstrap
